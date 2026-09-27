@@ -1,0 +1,37 @@
+{
+  "listeners": [
+    {
+      "name": "http",
+      "port": 80,
+      "protocol": "http",
+      "routes": {
+        "example1.com": "http://localhost:8888",
+        "example2.com": "http://localhost:8889",
+        "api.example.local": {
+          "target": "http://localhost:4000",
+          "changeOrigin": true
+        }
+      },
+      "default": null
+    },
+    {
+      "name": "https",
+      "port": 443,
+      "protocol": "https",
+      "tls": {
+        "cert": "cert.pem",
+        "key": "key.pem"
+      },
+      "routes": {
+        "example1.com": "https://localhost:8888",
+        "example2.com": "https://localhost:8889",
+        "api.example.local": {
+          "target": "https://localhost:4443",
+          "changeOrigin": true,
+          "secure": false
+        }
+      },
+      "default": null
+    }
+  ]
+}

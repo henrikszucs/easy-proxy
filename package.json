@@ -1,0 +1,30 @@
+{
+  "name": "easy-proxy",
+  "version": "0.1.0",
+  "description": "Minimal CLI reverse proxy that serves multiple services on one port, routed by the request's domain",
+  "type": "module",
+  "bin": {
+    "easy-proxy": "src/cli.js"
+  },
+  "files": [
+    "src",
+    "conf/config.example.json",
+    "COPYING",
+    "COPYING.LESSER"
+  ],
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "proxy",
+    "reverse-proxy",
+    "virtual-host",
+    "cli"
+  ],
+  "author": "Henrik Szucs",
+  "license": "LGPL-3.0-only"
+}
